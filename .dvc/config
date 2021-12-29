@@ -1,2 +1,4 @@
+[core]
+    remote = s3remote-data
 ['remote "s3remote-data"']
     url = s3://ismail-akrout-mlops-c4-project/Data/
