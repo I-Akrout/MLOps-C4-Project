@@ -20,8 +20,6 @@ cat_features = [
     "native-country",
 ]
 
-
-
 # placeholder until we import the true process_dßata
 def process_data(*args, **kwargs):
     pass
