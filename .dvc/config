@@ -1,6 +1,4 @@
 ['remote "s3remote-data-raw"']
     url = s3://ismail-akrout-mlops-c4-project/Data/raw
-    profile = project_owner
 ['remote "s3remote-data-clean"']
     url = s3://ismail-akrout-mlops-c4-project/Data/clean
-    profile = project_owner
