@@ -3,10 +3,17 @@
 from sklearn.model_selection import train_test_split
 
 # Add the necessary imports for the starter code.
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier as RFC
+from ml.data import process_data
+
 
 # Add code to load in the data.
-data = "" # placeholder until we import the data
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+data = pd.read_csv('./census_clean.csv') # placeholder until we import the data
+
+
+# Optional enhancement, use K-fold cross validation
+# instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20)
 
 cat_features = [
@@ -20,14 +27,22 @@ cat_features = [
     "native-country",
 ]
 
-# placeholder until we import the true process_dßata
-def process_data(*args, **kwargs):
-    pass
-
 X_train, y_train, encoder, lb = process_data(
-    train, categorical_features=cat_features, label="salary", training=True
+    train, 
+    categorical_features=cat_features, 
+    label="salary", 
+    training=True
 )
 
 # Proces the test data with the process_data function.
+X_train, y_train, encoder, lb = process_data(
+    test, 
+    categorical_features=cat_features, 
+    encoder=encoder, 
+    label="salary"
+    training=False
+)
+
 
 # Train and save a model.
+

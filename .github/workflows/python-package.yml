@@ -51,6 +51,10 @@ jobs:
     - name: Setup DVC
       uses: iterative/setup-dvc@v1
 
-    - name: Pull data
+    - name: Pull raw data
       run: |
-        dvc pull
+        dvc pull -r s3remote-data-raw
+
+    - name: Pull clean data
+      run: |
+        dvc pull -r s3remote-data-clean
