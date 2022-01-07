@@ -9,7 +9,7 @@ from ml.data import process_data
 
 
 # Add code to load in the data.
-data = pd.read_csv('./census_clean.csv') # placeholder until we import the data
+data = pd.read_csv('./census_clean.csv') 
 
 
 # Optional enhancement, use K-fold cross validation
@@ -39,10 +39,9 @@ X_train, y_train, encoder, lb = process_data(
     test, 
     categorical_features=cat_features, 
     encoder=encoder, 
-    label="salary"
+    label="salary",
     training=False
 )
 
 
 # Train and save a model.
-
