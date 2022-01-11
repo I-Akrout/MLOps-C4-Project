@@ -71,9 +71,15 @@ logging.info(f'INFO: X_test.shape: {X_test.shape}')
 logging.info(f'INFO: y_test.shape: {y_test.shape}')
 
 
+model = joblib.load('./ml/models/rfc_model.pkl')
+
 # Train and save a model.
 logging.info('INFO: Starting training process ...')
 model = train_model(X_train, y_train)
+
+logging.info(f'Train Acc: {model.score(X_train, y_train)}')
+logging.info(f'Test Acc: {model.score(X_test, y_test)}')
+
 
 precision, recall, fbeta = compute_model_metrics(
     y_train, 
@@ -97,6 +103,7 @@ precision, recall, fbeta = compute_model_metrics(
 logging.info(f'INFO: Train metrics: Precision:\
     {precision}, recall: {recall}, fbeta: {fbeta}')
 
+
 logging.info('INFO: Saving the model ...')
 joblib.dump(model, './ml/models/rfc_model.pkl')
 logging.info('SUCCESS: Model saved')
@@ -110,4 +117,3 @@ joblib.dump(lb, './ml/models/rfc_lb.joblib')
 logging.info('SUCCESS: LB saved')
 
 slice_performance(cat_features, test)
-
