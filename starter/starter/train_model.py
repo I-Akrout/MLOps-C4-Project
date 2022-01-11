@@ -10,6 +10,8 @@ from ml.model import *
 from ml.clean_data_helper import load_data
 import joblib
 
+
+
 import logging
 logging.basicConfig(
     filename='./train_logs/census_train.log',
@@ -106,4 +108,6 @@ logging.info('SUCCESS: Encoder saved')
 logging.info('INFO: Saving the data LB ...')
 joblib.dump(lb, './ml/models/rfc_lb.joblib')
 logging.info('SUCCESS: LB saved')
+
+slice_performance(cat_features, test)
 
