@@ -1,4 +1,5 @@
 [core]
     remote = s3remote-data
+    no_scm = true
 ['remote "s3remote-data"']
     url = s3://ismail-akrout-mlops-c4-project/Data/
