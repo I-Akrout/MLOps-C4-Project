@@ -127,5 +127,5 @@ def slice_performance(categorical_features, test_set):
                 "fbeta": fbeta
             })
     
-    with open('slice_performance.json','w') as fp: 
+    with open('slice_output.txt','w') as fp: 
         dump(output_json,fp)
