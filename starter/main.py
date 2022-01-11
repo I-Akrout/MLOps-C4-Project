@@ -126,9 +126,9 @@ cat_features = [
 
 @api.post("/infer")
 async def infer(data: DataEntry):
-    model = load('./starter/ml/models/rfc_model.pkl')
-    lb = load('./starter/ml/models/rfc_lb.joblib')
-    encoder = load('./starter/ml/models/rfc_encoder.joblib')
+    model = load('starter/ml/models/rfc_model.pkl')
+    lb = load('starter/ml/models/rfc_lb.joblib')
+    encoder = load('starter/ml/models/rfc_encoder.joblib')
 
     data_entry  = np.array([[
                      data.age,
