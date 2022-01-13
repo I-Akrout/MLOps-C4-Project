@@ -4,7 +4,7 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Model Details
 
-The model yielded by this project is a Random Forest Classifier trained on the Census dataset.
+The model yielded by this project is a scikit-learn Random Forest Classifier trained on the Census dataset.
 
 ## Intended Use
 
@@ -12,20 +12,31 @@ The model should be used to predict salary of people based on different attribut
 
 ## Training Data
 
-The original data (provided here: https://archive.ics.uci.edu/ml/datasets/census+income) is splitted into two chuncks (80% train)
+The original data (provided here: https://archive.ics.uci.edu/ml/datasets/census+income) is splitted into two chuncks (80% train, 20 % test)
 
 ## Evaluation Data
 
 The original data is splitted into two chuncks (20% test)
 
 ## Metrics
-_Please include the metrics used and your model's performance on those metrics._
+To mesure the performance of our model, we used 3 different metrics:
 
-To get the best estimator we used the accuracy as a metric:
-We found:
-Train Acc: 91.01%
-Test Acc: 91.5 %
+    - Precision
+    - Recall
+    - Fbeta  
 
+
+On the train set the model yielded the following values:
+- Precision: 88.69 %
+- Recall: 72.31 %
+- Fbeta: 79.60 %
+
+Using the evaluation data, our model gave the following results:
+- Precision: 89.35 %
+- Recall: 72.07 %
+- Fbeta: 79.79 %
+
+A more detailed results are provided in the `starter/slice_output.txt` file. 
 ## Ethical Considerations
 
 Given the slice study performed on the categorical features, 

@@ -81,6 +81,7 @@ logging.info(f'Train Acc: {model.score(X_train, y_train)}')
 logging.info(f'Test Acc: {model.score(X_test, y_test)}')
 
 
+
 precision, recall, fbeta = compute_model_metrics(
     y_train, 
     inference(
@@ -100,7 +101,7 @@ precision, recall, fbeta = compute_model_metrics(
         X_test
         )
     )
-logging.info(f'INFO: Train metrics: Precision:\
+logging.info(f'INFO: Test metrics: Precision:\
     {precision}, recall: {recall}, fbeta: {fbeta}')
 
 
